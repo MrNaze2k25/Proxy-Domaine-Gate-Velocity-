@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy domenų maršrutizatorius (Gate ir Velocity)',
+        'nav_label' => 'Proxy maršrutizatorius',
+        'section_proxy' => 'Pagrindinė proxy konfigūracija',
+        'section_proxy_desc' => 'Pasirinkite konteinerį, kuriame veikia Gate Proxy arba Velocity. Čia rodomi tik proxy serveriai.',
+        'proxy_server' => 'Proxy serveris (Gate / Velocity)',
+        'proxy_server_help' => 'Konteineris, kurio konfigūracijos failas bus atnaujinamas automatiškai.',
+        'proxy_type' => 'Proxy tipas',
+        'base_domain' => 'Bazinis domenas (priedėlis)',
+        'base_domain_help' => 'Pavyzdys: pelican.dev (žaidėjai jungsis per vardas.pelican.dev).',
+        'config_path' => 'Konfigūracijos failo kelias',
+        'config_path_help' => 'Numatytasis: config.yml Gate Proxy arba velocity.toml Velocity.',
+        'only_minecraft' => 'Rodyti tik Minecraft serveriuose',
+        'only_minecraft_help' => 'Paslepia skirtuką Proxy domenas ne Minecraft serveriuose ir pačiuose proxy serveriuose.',
+        'use_ip_alias' => 'Naudoti IP slapyvardį backend adresui',
+        'use_ip_alias_help' => 'Jei išjungta, naudojamas tiesioginis paskirstymo IP adresas (pvz., 192.168.1.44:25566).',
+        'blacklist' => 'Uždrausti subdomenai',
+        'blacklist_help' => 'Rezervuoti subdomenai, kurių vartotojai negali pasirinkti.',
+        'sync_now' => 'Priverstinai sinchronizuoti',
+    ],
+    'server' => [
+        'title' => 'Proxy domenas',
+        'nav_label' => 'Proxy domenas',
+        'section_title' => 'Pasirinktinis domeno vardas (proxy)',
+        'section_desc' => 'Pasirinkite tik savo subdomeno priešdėlį. Jis automatiškai nukreips į jūsų serverį per proxy.',
+        'subdomain_label' => 'Subdomeno priešdėlis',
+        'subdomain_help' => 'Tik raidės, skaičiai ir brūkšneliai (pvz., point-zero).',
+        'preview_label' => 'Visas prisijungimo adresas',
+        'preview_example' => 'pvz.: point-zero.:domain',
+        'backend_label' => 'Backend nukreipimas (IP:prievadas)',
+        'no_allocation' => 'Šiame serveryje nerastas pagrindinis paskirstymas.',
+    ],
+    'actions' => [
+        'save' => 'Išsaugoti',
+        'delete' => 'Ištrinti domeną',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Nustatymai išsaugoti, o proxy konfigūracija sinchronizuota!',
+        'synced' => 'Proxy konfigūracijos failas sėkmingai atnaujintas!',
+        'sync_error' => 'Klaida sinchronizuojant su proxy serveriu',
+        'route_saved' => 'Subdomenas užregistruotas ir aktyvus proxy!',
+        'route_deleted' => 'Subdomenas pašalintas iš proxy konfigūracijos.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Administravimo skydelyje (Proxy maršrutizatorius) nepasirinktas joks proxy serveris (Gate/Velocity).',
+        'proxy_not_found' => 'Sukonfigūruotas proxy serveris nerastas.',
+        'blacklisted' => 'Šis subdomeno pavadinimas rezervuotas ir negali būti naudojamas.',
+        'taken' => 'Šį subdomeną jau naudoja kitas serveris.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

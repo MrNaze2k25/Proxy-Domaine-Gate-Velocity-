@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy-Domain-Router (Gate & Velocity)',
+        'nav_label' => 'Proxy-Router',
+        'section_proxy' => 'Haupt-Proxy-Konfiguration',
+        'section_proxy_desc' => 'Wähle den Container, auf dem Gate Proxy oder Velocity läuft. Hier werden nur Proxy-Server aufgelistet.',
+        'proxy_server' => 'Proxy-Server (Gate / Velocity)',
+        'proxy_server_help' => 'Der Container, dessen Konfigurationsdatei automatisch aktualisiert wird.',
+        'proxy_type' => 'Proxy-Typ',
+        'base_domain' => 'Basisdomain (Suffix)',
+        'base_domain_help' => 'Beispiel: pelican.dev (Spieler verbinden sich über name.pelican.dev).',
+        'config_path' => 'Pfad der Konfigurationsdatei',
+        'config_path_help' => 'Standard: config.yml für Gate Proxy bzw. velocity.toml für Velocity.',
+        'only_minecraft' => 'Nur auf Minecraft-Servern anzeigen',
+        'only_minecraft_help' => 'Blendet den Tab „Proxy-Domain“ auf Nicht-Minecraft-Servern und auf den Proxy-Servern selbst aus.',
+        'use_ip_alias' => 'IP-Alias für die Backend-Adresse verwenden',
+        'use_ip_alias_help' => 'Wenn deaktiviert, wird die direkte IP-Adresse der Zuweisung verwendet (z. B. 192.168.1.44:25566).',
+        'blacklist' => 'Gesperrte Subdomains',
+        'blacklist_help' => 'Reservierte Subdomains, die Benutzer nicht wählen können.',
+        'sync_now' => 'Synchronisierung erzwingen',
+    ],
+    'server' => [
+        'title' => 'Proxy-Domain',
+        'nav_label' => 'Proxy-Domain',
+        'section_title' => 'Eigener Domainname (Proxy)',
+        'section_desc' => 'Wähle nur das Präfix deiner Subdomain. Sie leitet automatisch über den Proxy auf deinen Server weiter.',
+        'subdomain_label' => 'Subdomain-Präfix',
+        'subdomain_help' => 'Nur Buchstaben, Zahlen und Bindestriche (z. B. point-zero).',
+        'preview_label' => 'Vollständige Verbindungsadresse',
+        'preview_example' => 'z. B.: point-zero.:domain',
+        'backend_label' => 'Backend-Weiterleitung (IP:Port)',
+        'no_allocation' => 'Auf diesem Server wurde keine primäre Zuweisung gefunden.',
+    ],
+    'actions' => [
+        'save' => 'Speichern',
+        'delete' => 'Domain löschen',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Einstellungen gespeichert und Proxy-Konfiguration synchronisiert!',
+        'synced' => 'Proxy-Konfigurationsdatei erfolgreich aktualisiert!',
+        'sync_error' => 'Fehler bei der Synchronisierung mit dem Proxy-Server',
+        'route_saved' => 'Subdomain registriert und auf dem Proxy aktiv!',
+        'route_deleted' => 'Subdomain aus der Proxy-Konfiguration entfernt.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Im Admin-Panel (Proxy-Router) wurde kein Proxy-Server (Gate/Velocity) ausgewählt.',
+        'proxy_not_found' => 'Der konfigurierte Proxy-Server wurde nicht gefunden.',
+        'blacklisted' => 'Dieser Subdomain-Name ist reserviert und kann nicht verwendet werden.',
+        'taken' => 'Diese Subdomain wird bereits von einem anderen Server verwendet.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite-Modus - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

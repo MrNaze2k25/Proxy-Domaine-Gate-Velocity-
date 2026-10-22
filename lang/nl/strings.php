@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy-domeinrouter (Gate & Velocity)',
+        'nav_label' => 'Proxy-router',
+        'section_proxy' => 'Hoofdconfiguratie van de Proxy',
+        'section_proxy_desc' => 'Selecteer de container waarop Gate Proxy of Velocity draait. Hier worden alleen Proxy-servers getoond.',
+        'proxy_server' => 'Proxy-server (Gate / Velocity)',
+        'proxy_server_help' => 'De container waarvan het configuratiebestand automatisch wordt bijgewerkt.',
+        'proxy_type' => 'Proxytype',
+        'base_domain' => 'Basisdomein (achtervoegsel)',
+        'base_domain_help' => 'Voorbeeld: pelican.dev (spelers verbinden via naam.pelican.dev).',
+        'config_path' => 'Pad van het configuratiebestand',
+        'config_path_help' => 'Standaard: config.yml voor Gate Proxy, of velocity.toml voor Velocity.',
+        'only_minecraft' => 'Alleen tonen op Minecraft-servers',
+        'only_minecraft_help' => 'Verbergt het tabblad Proxy-domein op niet-Minecraft-servers en op de Proxy-servers zelf.',
+        'use_ip_alias' => 'IP-alias gebruiken voor het backendadres',
+        'use_ip_alias_help' => 'Indien uitgeschakeld wordt het directe IP-adres van de allocatie gebruikt (bijv. 192.168.1.44:25566).',
+        'blacklist' => 'Verboden subdomeinen',
+        'blacklist_help' => 'Gereserveerde subdomeinen die gebruikers niet kunnen kiezen.',
+        'sync_now' => 'Synchronisatie forceren',
+    ],
+    'server' => [
+        'title' => 'Proxy-domein',
+        'nav_label' => 'Proxy-domein',
+        'section_title' => 'Eigen domeinnaam (Proxy)',
+        'section_desc' => 'Kies alleen het voorvoegsel van je subdomein. Het verwijst automatisch via de Proxy naar je server.',
+        'subdomain_label' => 'Subdomeinvoorvoegsel',
+        'subdomain_help' => 'Alleen letters, cijfers en koppeltekens (bijv. point-zero).',
+        'preview_label' => 'Volledig verbindingsadres',
+        'preview_example' => 'bijv.: point-zero.:domain',
+        'backend_label' => 'Backend-doorverwijzing (IP:Poort)',
+        'no_allocation' => 'Geen primaire allocatie gevonden op deze server.',
+    ],
+    'actions' => [
+        'save' => 'Opslaan',
+        'delete' => 'Domein verwijderen',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Instellingen opgeslagen en proxyconfiguratie gesynchroniseerd!',
+        'synced' => 'Proxyconfiguratiebestand succesvol bijgewerkt!',
+        'sync_error' => 'Fout bij het synchroniseren met de Proxy-server',
+        'route_saved' => 'Subdomein geregistreerd en actief op de Proxy!',
+        'route_deleted' => 'Subdomein verwijderd uit de Proxy-configuratie.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Er is geen Proxy-server (Gate/Velocity) geselecteerd in het beheerpaneel (Proxy-router).',
+        'proxy_not_found' => 'De geconfigureerde Proxy-server kon niet worden gevonden.',
+        'blacklisted' => 'Deze subdomeinnaam is gereserveerd en kan niet worden gebruikt.',
+        'taken' => 'Dit subdomein wordt al door een andere server gebruikt.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite-modus - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

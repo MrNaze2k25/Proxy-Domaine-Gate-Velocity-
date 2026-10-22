@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Router domen proxy (Gate i Velocity)',
+        'nav_label' => 'Router proxy',
+        'section_proxy' => 'Główna konfiguracja proxy',
+        'section_proxy_desc' => 'Wybierz kontener z uruchomionym Gate Proxy lub Velocity. Na liście są tylko serwery proxy.',
+        'proxy_server' => 'Serwer proxy (Gate / Velocity)',
+        'proxy_server_help' => 'Kontener, którego plik konfiguracyjny będzie aktualizowany automatycznie.',
+        'proxy_type' => 'Typ proxy',
+        'base_domain' => 'Domena główna (sufiks)',
+        'base_domain_help' => 'Przykład: pelican.dev (gracze połączą się przez nazwa.pelican.dev).',
+        'config_path' => 'Ścieżka pliku konfiguracyjnego',
+        'config_path_help' => 'Domyślnie: config.yml dla Gate Proxy lub velocity.toml dla Velocity.',
+        'only_minecraft' => 'Pokaż tylko na serwerach Minecraft',
+        'only_minecraft_help' => 'Ukrywa kartę Domena proxy na serwerach innych niż Minecraft oraz na samych serwerach proxy.',
+        'use_ip_alias' => 'Użyj aliasu IP dla adresu backendu',
+        'use_ip_alias_help' => 'Jeśli wyłączone, używany jest bezpośredni adres IP alokacji (np. 192.168.1.44:25566).',
+        'blacklist' => 'Zablokowane subdomeny',
+        'blacklist_help' => 'Zarezerwowane subdomeny, których użytkownicy nie mogą wybrać.',
+        'sync_now' => 'Wymuś synchronizację',
+    ],
+    'server' => [
+        'title' => 'Domena proxy',
+        'nav_label' => 'Domena proxy',
+        'section_title' => 'Własna nazwa domeny (proxy)',
+        'section_desc' => 'Wybierz tylko prefiks swojej subdomeny. Będzie automatycznie przekierowywać na Twój serwer przez proxy.',
+        'subdomain_label' => 'Prefiks subdomeny',
+        'subdomain_help' => 'Tylko litery, cyfry i myślniki (np. point-zero).',
+        'preview_label' => 'Pełny adres połączenia',
+        'preview_example' => 'np.: point-zero.:domain',
+        'backend_label' => 'Przekierowanie backendu (IP:port)',
+        'no_allocation' => 'Nie znaleziono głównej alokacji na tym serwerze.',
+    ],
+    'actions' => [
+        'save' => 'Zapisz',
+        'delete' => 'Usuń domenę',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Ustawienia zapisane, a konfiguracja proxy zsynchronizowana!',
+        'synced' => 'Plik konfiguracyjny proxy został pomyślnie zaktualizowany!',
+        'sync_error' => 'Błąd podczas synchronizacji z serwerem proxy',
+        'route_saved' => 'Subdomena zarejestrowana i aktywna na proxy!',
+        'route_deleted' => 'Subdomena usunięta z konfiguracji proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'W panelu administracyjnym (Router proxy) nie wybrano serwera proxy (Gate/Velocity).',
+        'proxy_not_found' => 'Nie znaleziono skonfigurowanego serwera proxy.',
+        'blacklisted' => 'Ta nazwa subdomeny jest zarezerwowana i nie może być użyta.',
+        'taken' => 'Ta subdomena jest już używana przez inny serwer.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

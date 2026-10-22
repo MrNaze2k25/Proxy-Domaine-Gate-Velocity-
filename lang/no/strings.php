@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy-domeneruter (Gate og Velocity)',
+        'nav_label' => 'Proxy-ruter',
+        'section_proxy' => 'Hovedkonfigurasjon for proxy',
+        'section_proxy_desc' => 'Velg containeren som kjører Gate Proxy eller Velocity. Bare proxy-servere vises her.',
+        'proxy_server' => 'Proxy-server (Gate / Velocity)',
+        'proxy_server_help' => 'Containeren hvis konfigurasjonsfil oppdateres automatisk.',
+        'proxy_type' => 'Proxy-type',
+        'base_domain' => 'Basedomene (suffiks)',
+        'base_domain_help' => 'Eksempel: pelican.dev (spillere kobler til via navn.pelican.dev).',
+        'config_path' => 'Sti til konfigurasjonsfil',
+        'config_path_help' => 'Standard: config.yml for Gate Proxy eller velocity.toml for Velocity.',
+        'only_minecraft' => 'Vis kun på Minecraft-servere',
+        'only_minecraft_help' => 'Skjuler fanen Proxy-domene på servere som ikke er Minecraft, og på selve proxy-serverne.',
+        'use_ip_alias' => 'Bruk IP-alias for backend-adressen',
+        'use_ip_alias_help' => 'Hvis deaktivert, brukes allokeringens direkte IP-adresse (f.eks. 192.168.1.44:25566).',
+        'blacklist' => 'Blokkerte underdomener',
+        'blacklist_help' => 'Reserverte underdomener som brukere ikke kan velge.',
+        'sync_now' => 'Tving synkronisering',
+    ],
+    'server' => [
+        'title' => 'Proxy-domene',
+        'nav_label' => 'Proxy-domene',
+        'section_title' => 'Eget domenenavn (proxy)',
+        'section_desc' => 'Velg bare prefikset til underdomenet ditt. Det omdirigerer automatisk til serveren din via proxyen.',
+        'subdomain_label' => 'Underdomeneprefiks',
+        'subdomain_help' => 'Bare bokstaver, tall og bindestreker (f.eks. point-zero).',
+        'preview_label' => 'Full tilkoblingsadresse',
+        'preview_example' => 'f.eks.: point-zero.:domain',
+        'backend_label' => 'Backend-omdirigering (IP:port)',
+        'no_allocation' => 'Ingen primær allokering funnet på denne serveren.',
+    ],
+    'actions' => [
+        'save' => 'Lagre',
+        'delete' => 'Slett domene',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Innstillingene er lagret og proxy-konfigurasjonen er synkronisert!',
+        'synced' => 'Proxyens konfigurasjonsfil er oppdatert!',
+        'sync_error' => 'Feil under synkronisering med proxy-serveren',
+        'route_saved' => 'Underdomenet er registrert og aktivt på proxyen!',
+        'route_deleted' => 'Underdomenet er fjernet fra proxy-konfigurasjonen.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Ingen proxy-server (Gate/Velocity) er valgt i administrasjonspanelet (Proxy-ruter).',
+        'proxy_not_found' => 'Den konfigurerte proxy-serveren ble ikke funnet.',
+        'blacklisted' => 'Dette underdomenenavnet er reservert og kan ikke brukes.',
+        'taken' => 'Dette underdomenet brukes allerede av en annen server.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

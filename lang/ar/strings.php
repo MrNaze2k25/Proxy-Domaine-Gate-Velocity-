@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'موجّه نطاقات البروكسي (Gate وVelocity)',
+        'nav_label' => 'موجّه البروكسي',
+        'section_proxy' => 'الإعداد الرئيسي للبروكسي',
+        'section_proxy_desc' => 'اختر الحاوية التي تشغّل Gate Proxy أو Velocity. تُعرض هنا خوادم البروكسي فقط.',
+        'proxy_server' => 'خادم البروكسي (Gate / Velocity)',
+        'proxy_server_help' => 'الحاوية التي سيتم تحديث ملف إعداداتها تلقائيًا.',
+        'proxy_type' => 'نوع البروكسي',
+        'base_domain' => 'النطاق الأساسي (اللاحقة)',
+        'base_domain_help' => 'مثال: pelican.dev (سيتصل اللاعبون عبر الاسم.pelican.dev).',
+        'config_path' => 'مسار ملف الإعدادات',
+        'config_path_help' => 'الافتراضي: config.yml لـ Gate Proxy أو velocity.toml لـ Velocity.',
+        'only_minecraft' => 'العرض على خوادم Minecraft فقط',
+        'only_minecraft_help' => 'يخفي تبويب نطاق البروكسي على الخوادم غير Minecraft وعلى خوادم البروكسي نفسها.',
+        'use_ip_alias' => 'استخدام اسم IP مستعار لعنوان الواجهة الخلفية',
+        'use_ip_alias_help' => 'عند التعطيل، يُستخدم عنوان IP المباشر للتخصيص (مثل 192.168.1.44:25566).',
+        'blacklist' => 'النطاقات الفرعية المحظورة',
+        'blacklist_help' => 'نطاقات فرعية محجوزة لا يمكن للمستخدمين اختيارها.',
+        'sync_now' => 'فرض المزامنة الآن',
+    ],
+    'server' => [
+        'title' => 'نطاق البروكسي',
+        'nav_label' => 'نطاق البروكسي',
+        'section_title' => 'اسم نطاق مخصص (بروكسي)',
+        'section_desc' => 'اختر بادئة النطاق الفرعي فقط. ستتم إعادة التوجيه تلقائيًا إلى خادمك عبر البروكسي.',
+        'subdomain_label' => 'بادئة النطاق الفرعي',
+        'subdomain_help' => 'أحرف وأرقام وشرطات فقط (مثل point-zero).',
+        'preview_label' => 'عنوان الاتصال الكامل',
+        'preview_example' => 'مثال: point-zero.:domain',
+        'backend_label' => 'إعادة توجيه الواجهة الخلفية (IP:المنفذ)',
+        'no_allocation' => 'لم يتم العثور على تخصيص رئيسي على هذا الخادم.',
+    ],
+    'actions' => [
+        'save' => 'حفظ',
+        'delete' => 'حذف النطاق',
+    ],
+    'notifications' => [
+        'settings_saved' => 'تم حفظ الإعدادات ومزامنة إعدادات البروكسي!',
+        'synced' => 'تم تحديث ملف إعدادات البروكسي بنجاح!',
+        'sync_error' => 'حدث خطأ أثناء المزامنة مع خادم البروكسي',
+        'route_saved' => 'تم تسجيل النطاق الفرعي وهو نشط على البروكسي!',
+        'route_deleted' => 'تمت إزالة النطاق الفرعي من إعدادات البروكسي.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'لم يتم اختيار أي خادم بروكسي (Gate/Velocity) في لوحة الإدارة (موجّه البروكسي).',
+        'proxy_not_found' => 'تعذر العثور على خادم البروكسي المُعدّ.',
+        'blacklisted' => 'اسم النطاق الفرعي هذا محجوز ولا يمكن استخدامه.',
+        'taken' => 'هذا النطاق الفرعي مستخدم بالفعل من قبل خادم آخر.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

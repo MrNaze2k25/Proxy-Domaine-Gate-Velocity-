@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy Domain Router (Gate & Velocity)',
+        'nav_label' => 'Proxy Router',
+        'section_proxy' => 'Main Proxy Configuration',
+        'section_proxy_desc' => 'Select the container running Gate Proxy or Velocity. Only Proxy servers are listed here.',
+        'proxy_server' => 'Proxy Server (Gate / Velocity)',
+        'proxy_server_help' => 'The container whose configuration file will be automatically updated.',
+        'proxy_type' => 'Proxy Type',
+        'base_domain' => 'Base Domain (Suffix)',
+        'base_domain_help' => 'Example: pelican.dev (players will connect via name.pelican.dev).',
+        'config_path' => 'Configuration File Path',
+        'config_path_help' => 'Default: config.yml for Gate Proxy, or velocity.toml for Velocity.',
+        'only_minecraft' => 'Show only on Minecraft servers',
+        'only_minecraft_help' => 'Hides the Proxy Domain tab on non-Minecraft servers and on Proxy servers themselves.',
+        'use_ip_alias' => 'Use IP Alias for backend address',
+        'use_ip_alias_help' => 'If disabled, uses the allocation direct IP address (e.g. 192.168.1.44:25566).',
+        'blacklist' => 'Blacklisted Subdomains',
+        'blacklist_help' => 'Reserved subdomains that users cannot claim.',
+        'sync_now' => 'Force Sync Now',
+    ],
+    'server' => [
+        'title' => 'Proxy Domain',
+        'nav_label' => 'Proxy Domain',
+        'section_title' => 'Custom Domain Name (Proxy)',
+        'section_desc' => 'Choose only your subdomain prefix. It will automatically redirect to your server via the Proxy.',
+        'subdomain_label' => 'Subdomain Prefix',
+        'subdomain_help' => 'Letters, numbers, and hyphens only (e.g., point-zero).',
+        'preview_label' => 'Full Connection Address',
+        'preview_example' => 'e.g.: point-zero.:domain',
+        'backend_label' => 'Backend Redirect (IP:Port)',
+        'no_allocation' => 'No primary allocation found on this server.',
+    ],
+    'actions' => [
+        'save' => 'Save',
+        'delete' => 'Delete Domain',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Settings saved and proxy configuration synchronized!',
+        'synced' => 'Proxy configuration file successfully updated!',
+        'sync_error' => 'Error while synchronizing with the Proxy server',
+        'route_saved' => 'Subdomain registered and active on the Proxy!',
+        'route_deleted' => 'Subdomain removed from the Proxy configuration.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'No Proxy server (Gate/Velocity) has been selected in the Admin Panel (Proxy Router).',
+        'proxy_not_found' => 'The configured Proxy server could not be found.',
+        'blacklisted' => 'This subdomain name is reserved and cannot be used.',
+        'taken' => 'This subdomain is already in use by another server.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite Mode - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

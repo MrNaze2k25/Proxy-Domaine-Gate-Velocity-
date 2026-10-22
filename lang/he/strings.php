@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'נתב דומיינים של פרוקסי (Gate ו-Velocity)',
+        'nav_label' => 'נתב פרוקסי',
+        'section_proxy' => 'תצורת פרוקסי ראשית',
+        'section_proxy_desc' => 'בחר את הקונטיינר שמריץ את Gate Proxy או Velocity. רק שרתי פרוקסי מוצגים כאן.',
+        'proxy_server' => 'שרת פרוקסי (Gate / Velocity)',
+        'proxy_server_help' => 'הקונטיינר שקובץ התצורה שלו יעודכן אוטומטית.',
+        'proxy_type' => 'סוג פרוקסי',
+        'base_domain' => 'דומיין בסיס (סיומת)',
+        'base_domain_help' => 'דוגמה: pelican.dev (שחקנים יתחברו דרך שם.pelican.dev).',
+        'config_path' => 'נתיב קובץ התצורה',
+        'config_path_help' => 'ברירת מחדל: config.yml עבור Gate Proxy, או velocity.toml עבור Velocity.',
+        'only_minecraft' => 'הצג רק בשרתי Minecraft',
+        'only_minecraft_help' => 'מסתיר את לשונית דומיין פרוקסי בשרתים שאינם Minecraft ובשרתי הפרוקסי עצמם.',
+        'use_ip_alias' => 'השתמש בכינוי IP עבור כתובת ה-backend',
+        'use_ip_alias_help' => 'אם מושבת, נעשה שימוש בכתובת ה-IP הישירה של ההקצאה (לדוגמה 192.168.1.44:25566).',
+        'blacklist' => 'תת-דומיינים חסומים',
+        'blacklist_help' => 'תת-דומיינים שמורים שמשתמשים לא יכולים לבחור.',
+        'sync_now' => 'אילוץ סנכרון',
+    ],
+    'server' => [
+        'title' => 'דומיין פרוקסי',
+        'nav_label' => 'דומיין פרוקסי',
+        'section_title' => 'שם דומיין מותאם אישית (פרוקסי)',
+        'section_desc' => 'בחר רק את התחילית של תת-הדומיין שלך. הוא יפנה אוטומטית לשרת שלך דרך הפרוקסי.',
+        'subdomain_label' => 'תחילית תת-דומיין',
+        'subdomain_help' => 'אותיות, ספרות ומקפים בלבד (לדוגמה point-zero).',
+        'preview_label' => 'כתובת חיבור מלאה',
+        'preview_example' => 'לדוגמה: point-zero.:domain',
+        'backend_label' => 'הפניית backend (IP:פורט)',
+        'no_allocation' => 'לא נמצאה הקצאה ראשית בשרת זה.',
+    ],
+    'actions' => [
+        'save' => 'שמור',
+        'delete' => 'מחק דומיין',
+    ],
+    'notifications' => [
+        'settings_saved' => 'ההגדרות נשמרו ותצורת הפרוקסי סונכרנה!',
+        'synced' => 'קובץ התצורה של הפרוקסי עודכן בהצלחה!',
+        'sync_error' => 'שגיאה בסנכרון עם שרת הפרוקסי',
+        'route_saved' => 'תת-הדומיין נרשם ופעיל בפרוקסי!',
+        'route_deleted' => 'תת-הדומיין הוסר מתצורת הפרוקסי.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'לא נבחר שרת פרוקסי (Gate/Velocity) בלוח הניהול (נתב פרוקסי).',
+        'proxy_not_found' => 'שרת הפרוקסי שהוגדר לא נמצא.',
+        'blacklisted' => 'שם תת-דומיין זה שמור ואין אפשרות להשתמש בו.',
+        'taken' => 'תת-דומיין זה כבר בשימוש על ידי שרת אחר.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

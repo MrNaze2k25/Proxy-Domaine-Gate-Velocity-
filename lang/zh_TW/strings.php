@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => '代理網域路由器（Gate 與 Velocity）',
+        'nav_label' => '代理路由器',
+        'section_proxy' => '代理主要設定',
+        'section_proxy_desc' => '選擇執行 Gate Proxy 或 Velocity 的容器。此處僅列出代理伺服器。',
+        'proxy_server' => '代理伺服器（Gate / Velocity）',
+        'proxy_server_help' => '其設定檔將被自動更新的容器。',
+        'proxy_type' => '代理類型',
+        'base_domain' => '基礎網域（後綴）',
+        'base_domain_help' => '範例：pelican.dev（玩家透過 名稱.pelican.dev 連線）。',
+        'config_path' => '設定檔路徑',
+        'config_path_help' => '預設：Gate Proxy 為 config.yml，Velocity 為 velocity.toml。',
+        'only_minecraft' => '僅在 Minecraft 伺服器上顯示',
+        'only_minecraft_help' => '在非 Minecraft 伺服器以及代理伺服器本身上隱藏「代理網域」分頁。',
+        'use_ip_alias' => '後端位址使用 IP 別名',
+        'use_ip_alias_help' => '停用時，使用配置的直接 IP 位址（例如 192.168.1.44:25566）。',
+        'blacklist' => '禁用的子網域',
+        'blacklist_help' => '使用者無法申請的保留子網域。',
+        'sync_now' => '立即強制同步',
+    ],
+    'server' => [
+        'title' => '代理網域',
+        'nav_label' => '代理網域',
+        'section_title' => '自訂網域名稱（代理）',
+        'section_desc' => '只需選擇子網域前綴。它會透過代理自動重新導向到你的伺服器。',
+        'subdomain_label' => '子網域前綴',
+        'subdomain_help' => '僅限字母、數字與連字號（例如 point-zero）。',
+        'preview_label' => '完整連線位址',
+        'preview_example' => '例如：point-zero.:domain',
+        'backend_label' => '後端重新導向（IP:連接埠）',
+        'no_allocation' => '在此伺服器上找不到主要配置。',
+    ],
+    'actions' => [
+        'save' => '儲存',
+        'delete' => '刪除網域',
+    ],
+    'notifications' => [
+        'settings_saved' => '設定已儲存，代理設定已同步！',
+        'synced' => '代理設定檔已成功更新！',
+        'sync_error' => '與代理伺服器同步時發生錯誤',
+        'route_saved' => '子網域已註冊並在代理上生效！',
+        'route_deleted' => '子網域已從代理設定中移除。',
+    ],
+    'errors' => [
+        'no_proxy_selected' => '管理面板（代理路由器）中尚未選擇代理伺服器（Gate/Velocity）。',
+        'proxy_not_found' => '找不到已設定的代理伺服器。',
+        'blacklisted' => '此子網域名稱為保留名稱，無法使用。',
+        'taken' => '此子網域已被其他伺服器使用。',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

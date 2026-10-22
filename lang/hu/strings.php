@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy-domain útválasztó (Gate és Velocity)',
+        'nav_label' => 'Proxy útválasztó',
+        'section_proxy' => 'Fő proxy-konfiguráció',
+        'section_proxy_desc' => 'Válaszd ki a Gate Proxyt vagy Velocityt futtató konténert. Itt csak proxy-szerverek jelennek meg.',
+        'proxy_server' => 'Proxy-szerver (Gate / Velocity)',
+        'proxy_server_help' => 'A konténer, amelynek konfigurációs fájlja automatikusan frissül.',
+        'proxy_type' => 'Proxy típusa',
+        'base_domain' => 'Alapdomain (utótag)',
+        'base_domain_help' => 'Példa: pelican.dev (a játékosok a név.pelican.dev címen csatlakoznak).',
+        'config_path' => 'Konfigurációs fájl elérési útja',
+        'config_path_help' => 'Alapértelmezett: config.yml a Gate Proxyhoz, illetve velocity.toml a Velocityhez.',
+        'only_minecraft' => 'Csak Minecraft-szervereken jelenjen meg',
+        'only_minecraft_help' => 'Elrejti a Proxy-domain fület a nem Minecraft-szervereken és magukon a proxy-szervereken.',
+        'use_ip_alias' => 'IP-alias használata a backend címhez',
+        'use_ip_alias_help' => 'Kikapcsolva a foglalás közvetlen IP-címét használja (pl. 192.168.1.44:25566).',
+        'blacklist' => 'Tiltott aldomainek',
+        'blacklist_help' => 'Fenntartott aldomainek, amelyeket a felhasználók nem választhatnak.',
+        'sync_now' => 'Szinkronizálás kényszerítése',
+    ],
+    'server' => [
+        'title' => 'Proxy-domain',
+        'nav_label' => 'Proxy-domain',
+        'section_title' => 'Egyéni domainnév (proxy)',
+        'section_desc' => 'Csak az aldomain előtagját válaszd ki. Automatikusan átirányít a szerveredre a proxyn keresztül.',
+        'subdomain_label' => 'Aldomain előtagja',
+        'subdomain_help' => 'Csak betűk, számok és kötőjelek (pl. point-zero).',
+        'preview_label' => 'Teljes csatlakozási cím',
+        'preview_example' => 'pl.: point-zero.:domain',
+        'backend_label' => 'Backend átirányítás (IP:port)',
+        'no_allocation' => 'Ezen a szerveren nem található elsődleges foglalás.',
+    ],
+    'actions' => [
+        'save' => 'Mentés',
+        'delete' => 'Domain törlése',
+    ],
+    'notifications' => [
+        'settings_saved' => 'A beállítások mentve, a proxy-konfiguráció szinkronizálva!',
+        'synced' => 'A proxy konfigurációs fájlja sikeresen frissült!',
+        'sync_error' => 'Hiba a proxy-szerverrel való szinkronizálás közben',
+        'route_saved' => 'Az aldomain regisztrálva és aktív a proxyn!',
+        'route_deleted' => 'Az aldomain eltávolítva a proxy-konfigurációból.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Az adminisztrációs panelen (Proxy útválasztó) nincs kiválasztva proxy-szerver (Gate/Velocity).',
+        'proxy_not_found' => 'A beállított proxy-szerver nem található.',
+        'blacklisted' => 'Ez az aldomainnév fenntartott, nem használható.',
+        'taken' => 'Ezt az aldomaint már egy másik szerver használja.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

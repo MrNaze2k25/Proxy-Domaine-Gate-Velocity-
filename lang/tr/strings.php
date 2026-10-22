@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy Alan Adı Yönlendiricisi (Gate ve Velocity)',
+        'nav_label' => 'Proxy Yönlendirici',
+        'section_proxy' => 'Ana Proxy Yapılandırması',
+        'section_proxy_desc' => 'Gate Proxy veya Velocity çalıştıran konteyneri seçin. Burada yalnızca Proxy sunucuları listelenir.',
+        'proxy_server' => 'Proxy Sunucusu (Gate / Velocity)',
+        'proxy_server_help' => 'Yapılandırma dosyası otomatik olarak güncellenecek konteyner.',
+        'proxy_type' => 'Proxy Türü',
+        'base_domain' => 'Temel Alan Adı (Sonek)',
+        'base_domain_help' => 'Örnek: pelican.dev (oyuncular isim.pelican.dev üzerinden bağlanır).',
+        'config_path' => 'Yapılandırma Dosyası Yolu',
+        'config_path_help' => 'Varsayılan: Gate Proxy için config.yml, Velocity için velocity.toml.',
+        'only_minecraft' => 'Yalnızca Minecraft sunucularında göster',
+        'only_minecraft_help' => 'Minecraft olmayan sunucularda ve Proxy sunucularının kendisinde Proxy Alan Adı sekmesini gizler.',
+        'use_ip_alias' => 'Backend adresi için IP takma adını kullan',
+        'use_ip_alias_help' => 'Kapalıysa tahsisin doğrudan IP adresi kullanılır (örn. 192.168.1.44:25566).',
+        'blacklist' => 'Yasaklı Alt Alan Adları',
+        'blacklist_help' => 'Kullanıcıların alamayacağı ayrılmış alt alan adları.',
+        'sync_now' => 'Eşitlemeyi Şimdi Zorla',
+    ],
+    'server' => [
+        'title' => 'Proxy Alan Adı',
+        'nav_label' => 'Proxy Alan Adı',
+        'section_title' => 'Özel Alan Adı (Proxy)',
+        'section_desc' => 'Yalnızca alt alan adı önekini seçin. Proxy üzerinden sunucunuza otomatik olarak yönlendirilir.',
+        'subdomain_label' => 'Alt Alan Adı Öneki',
+        'subdomain_help' => 'Yalnızca harf, rakam ve tire (örn. point-zero).',
+        'preview_label' => 'Tam Bağlantı Adresi',
+        'preview_example' => 'örn.: point-zero.:domain',
+        'backend_label' => 'Backend Yönlendirmesi (IP:Port)',
+        'no_allocation' => 'Bu sunucuda birincil tahsis bulunamadı.',
+    ],
+    'actions' => [
+        'save' => 'Kaydet',
+        'delete' => 'Alan Adını Sil',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Ayarlar kaydedildi ve proxy yapılandırması eşitlendi!',
+        'synced' => 'Proxy yapılandırma dosyası başarıyla güncellendi!',
+        'sync_error' => 'Proxy sunucusuyla eşitleme sırasında hata oluştu',
+        'route_saved' => 'Alt alan adı kaydedildi ve Proxy üzerinde etkin!',
+        'route_deleted' => 'Alt alan adı Proxy yapılandırmasından kaldırıldı.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Yönetim Panelinde (Proxy Yönlendirici) herhangi bir Proxy sunucusu (Gate/Velocity) seçilmedi.',
+        'proxy_not_found' => 'Yapılandırılan Proxy sunucusu bulunamadı.',
+        'blacklisted' => 'Bu alt alan adı ayrılmıştır ve kullanılamaz.',
+        'taken' => 'Bu alt alan adı başka bir sunucu tarafından zaten kullanılıyor.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Roteador de domínios Proxy (Gate e Velocity)',
+        'nav_label' => 'Roteador Proxy',
+        'section_proxy' => 'Configuração principal do Proxy',
+        'section_proxy_desc' => 'Selecione o contêiner que executa o Gate Proxy ou o Velocity. Apenas servidores Proxy são listados aqui.',
+        'proxy_server' => 'Servidor Proxy (Gate / Velocity)',
+        'proxy_server_help' => 'O contêiner cujo arquivo de configuração será atualizado automaticamente.',
+        'proxy_type' => 'Tipo de Proxy',
+        'base_domain' => 'Domínio base (sufixo)',
+        'base_domain_help' => 'Exemplo: pelican.dev (os jogadores se conectarão via nome.pelican.dev).',
+        'config_path' => 'Caminho do arquivo de configuração',
+        'config_path_help' => 'Padrão: config.yml para Gate Proxy, ou velocity.toml para Velocity.',
+        'only_minecraft' => 'Mostrar apenas em servidores Minecraft',
+        'only_minecraft_help' => 'Oculta a aba Domínio Proxy em servidores que não são Minecraft e nos próprios servidores Proxy.',
+        'use_ip_alias' => 'Usar alias de IP para o endereço backend',
+        'use_ip_alias_help' => 'Se desativado, usa o endereço IP direto da alocação (ex.: 192.168.1.44:25566).',
+        'blacklist' => 'Subdomínios proibidos',
+        'blacklist_help' => 'Subdomínios reservados que os usuários não podem escolher.',
+        'sync_now' => 'Forçar sincronização',
+    ],
+    'server' => [
+        'title' => 'Domínio Proxy',
+        'nav_label' => 'Domínio Proxy',
+        'section_title' => 'Nome de domínio personalizado (Proxy)',
+        'section_desc' => 'Escolha apenas o prefixo do seu subdomínio. Ele redirecionará automaticamente para o seu servidor através do Proxy.',
+        'subdomain_label' => 'Prefixo do subdomínio',
+        'subdomain_help' => 'Apenas letras, números e hifens (ex.: point-zero).',
+        'preview_label' => 'Endereço de conexão completo',
+        'preview_example' => 'ex.: point-zero.:domain',
+        'backend_label' => 'Redirecionamento backend (IP:Porta)',
+        'no_allocation' => 'Nenhuma alocação principal encontrada neste servidor.',
+    ],
+    'actions' => [
+        'save' => 'Salvar',
+        'delete' => 'Excluir domínio',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Configurações salvas e configuração do proxy sincronizada!',
+        'synced' => 'Arquivo de configuração do proxy atualizado com sucesso!',
+        'sync_error' => 'Erro ao sincronizar com o servidor Proxy',
+        'route_saved' => 'Subdomínio registrado e ativo no Proxy!',
+        'route_deleted' => 'Subdomínio removido da configuração do Proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Nenhum servidor Proxy (Gate/Velocity) foi selecionado no painel de administração (Roteador Proxy).',
+        'proxy_not_found' => 'O servidor Proxy configurado não foi encontrado.',
+        'blacklisted' => 'Este nome de subdomínio é reservado e não pode ser usado.',
+        'taken' => 'Este subdomínio já está em uso por outro servidor.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Modo Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

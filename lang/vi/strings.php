@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Bộ định tuyến tên miền Proxy (Gate & Velocity)',
+        'nav_label' => 'Bộ định tuyến Proxy',
+        'section_proxy' => 'Cấu hình Proxy chính',
+        'section_proxy_desc' => 'Chọn container đang chạy Gate Proxy hoặc Velocity. Chỉ các máy chủ Proxy được liệt kê ở đây.',
+        'proxy_server' => 'Máy chủ Proxy (Gate / Velocity)',
+        'proxy_server_help' => 'Container có tệp cấu hình sẽ được cập nhật tự động.',
+        'proxy_type' => 'Loại Proxy',
+        'base_domain' => 'Tên miền gốc (hậu tố)',
+        'base_domain_help' => 'Ví dụ: pelican.dev (người chơi sẽ kết nối qua ten.pelican.dev).',
+        'config_path' => 'Đường dẫn tệp cấu hình',
+        'config_path_help' => 'Mặc định: config.yml cho Gate Proxy hoặc velocity.toml cho Velocity.',
+        'only_minecraft' => 'Chỉ hiển thị trên máy chủ Minecraft',
+        'only_minecraft_help' => 'Ẩn tab Tên miền Proxy trên các máy chủ không phải Minecraft và trên chính các máy chủ Proxy.',
+        'use_ip_alias' => 'Dùng bí danh IP cho địa chỉ backend',
+        'use_ip_alias_help' => 'Nếu tắt, sẽ dùng địa chỉ IP trực tiếp của phân bổ (vd: 192.168.1.44:25566).',
+        'blacklist' => 'Tên miền phụ bị cấm',
+        'blacklist_help' => 'Các tên miền phụ được giữ riêng mà người dùng không thể chọn.',
+        'sync_now' => 'Buộc đồng bộ ngay',
+    ],
+    'server' => [
+        'title' => 'Tên miền Proxy',
+        'nav_label' => 'Tên miền Proxy',
+        'section_title' => 'Tên miền tùy chỉnh (Proxy)',
+        'section_desc' => 'Chỉ chọn tiền tố tên miền phụ của bạn. Nó sẽ tự động chuyển hướng đến máy chủ của bạn thông qua Proxy.',
+        'subdomain_label' => 'Tiền tố tên miền phụ',
+        'subdomain_help' => 'Chỉ gồm chữ cái, chữ số và dấu gạch ngang (vd: point-zero).',
+        'preview_label' => 'Địa chỉ kết nối đầy đủ',
+        'preview_example' => 'vd: point-zero.:domain',
+        'backend_label' => 'Chuyển hướng backend (IP:Cổng)',
+        'no_allocation' => 'Không tìm thấy phân bổ chính trên máy chủ này.',
+    ],
+    'actions' => [
+        'save' => 'Lưu',
+        'delete' => 'Xóa tên miền',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Đã lưu cài đặt và đồng bộ cấu hình proxy!',
+        'synced' => 'Đã cập nhật thành công tệp cấu hình proxy!',
+        'sync_error' => 'Lỗi khi đồng bộ với máy chủ Proxy',
+        'route_saved' => 'Tên miền phụ đã được đăng ký và hoạt động trên Proxy!',
+        'route_deleted' => 'Đã xóa tên miền phụ khỏi cấu hình Proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Chưa chọn máy chủ Proxy (Gate/Velocity) trong Bảng quản trị (Bộ định tuyến Proxy).',
+        'proxy_not_found' => 'Không tìm thấy máy chủ Proxy đã cấu hình.',
+        'blacklisted' => 'Tên miền phụ này đã được đặt trước và không thể sử dụng.',
+        'taken' => 'Tên miền phụ này đã được máy chủ khác sử dụng.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

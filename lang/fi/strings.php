@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Proxy-verkkotunnusten reititin (Gate ja Velocity)',
+        'nav_label' => 'Proxy-reititin',
+        'section_proxy' => 'Proxyn pääasetukset',
+        'section_proxy_desc' => 'Valitse kontti, jossa Gate Proxy tai Velocity pyörii. Tässä näytetään vain proxy-palvelimet.',
+        'proxy_server' => 'Proxy-palvelin (Gate / Velocity)',
+        'proxy_server_help' => 'Kontti, jonka asetustiedosto päivitetään automaattisesti.',
+        'proxy_type' => 'Proxyn tyyppi',
+        'base_domain' => 'Perusverkkotunnus (pääte)',
+        'base_domain_help' => 'Esimerkki: pelican.dev (pelaajat yhdistävät osoitteella nimi.pelican.dev).',
+        'config_path' => 'Asetustiedoston polku',
+        'config_path_help' => 'Oletus: config.yml Gate Proxylle tai velocity.toml Velocitylle.',
+        'only_minecraft' => 'Näytä vain Minecraft-palvelimilla',
+        'only_minecraft_help' => 'Piilottaa Proxy-verkkotunnus-välilehden muilta kuin Minecraft-palvelimilta sekä proxy-palvelimilta itseltään.',
+        'use_ip_alias' => 'Käytä IP-aliasta backend-osoitteessa',
+        'use_ip_alias_help' => 'Jos pois päältä, käytetään varauksen suoraa IP-osoitetta (esim. 192.168.1.44:25566).',
+        'blacklist' => 'Estetyt aliverkkotunnukset',
+        'blacklist_help' => 'Varatut aliverkkotunnukset, joita käyttäjät eivät voi valita.',
+        'sync_now' => 'Pakota synkronointi',
+    ],
+    'server' => [
+        'title' => 'Proxy-verkkotunnus',
+        'nav_label' => 'Proxy-verkkotunnus',
+        'section_title' => 'Oma verkkotunnus (proxy)',
+        'section_desc' => 'Valitse vain aliverkkotunnuksesi etuliite. Se ohjaa automaattisesti palvelimellesi proxyn kautta.',
+        'subdomain_label' => 'Aliverkkotunnuksen etuliite',
+        'subdomain_help' => 'Vain kirjaimia, numeroita ja yhdysmerkkejä (esim. point-zero).',
+        'preview_label' => 'Täydellinen yhteysosoite',
+        'preview_example' => 'esim.: point-zero.:domain',
+        'backend_label' => 'Backend-uudelleenohjaus (IP:portti)',
+        'no_allocation' => 'Tältä palvelimelta ei löytynyt ensisijaista varausta.',
+    ],
+    'actions' => [
+        'save' => 'Tallenna',
+        'delete' => 'Poista verkkotunnus',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Asetukset tallennettu ja proxyn asetukset synkronoitu!',
+        'synced' => 'Proxyn asetustiedosto päivitettiin onnistuneesti!',
+        'sync_error' => 'Virhe synkronoitaessa proxy-palvelimen kanssa',
+        'route_saved' => 'Aliverkkotunnus rekisteröity ja aktiivinen proxyssä!',
+        'route_deleted' => 'Aliverkkotunnus poistettu proxyn asetuksista.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Hallintapaneelissa (Proxy-reititin) ei ole valittu proxy-palvelinta (Gate/Velocity).',
+        'proxy_not_found' => 'Määritettyä proxy-palvelinta ei löytynyt.',
+        'blacklisted' => 'Tämä aliverkkotunnus on varattu, eikä sitä voi käyttää.',
+        'taken' => 'Toinen palvelin käyttää jo tätä aliverkkotunnusta.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

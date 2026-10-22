@@ -1,0 +1,17 @@
+{
+    "id": "proxy-domains",
+    "name": "Proxy Domains (Gate & Velocity)",
+    "author": "MrNaze",
+    "version": "1.0.1",
+    "description": "Automatically manages Minecraft subdomains and routing routes on Gate Proxy (Lite mode) or Velocity.",
+    "category": "plugin",
+    "namespace": "Julie\\ProxyDomains",
+    "class": "ProxyDomainsPlugin",
+    "panels": [
+        "admin",
+        "server"
+    ],
+    "panel_version": null,
+    "api_version": 1,
+    "composer_packages": null
+}

@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Smerovač proxy domén (Gate a Velocity)',
+        'nav_label' => 'Smerovač proxy',
+        'section_proxy' => 'Hlavná konfigurácia proxy',
+        'section_proxy_desc' => 'Vyberte kontajner, v ktorom beží Gate Proxy alebo Velocity. Zobrazujú sa iba proxy servery.',
+        'proxy_server' => 'Proxy server (Gate / Velocity)',
+        'proxy_server_help' => 'Kontajner, ktorého konfiguračný súbor sa bude automaticky aktualizovať.',
+        'proxy_type' => 'Typ proxy',
+        'base_domain' => 'Základná doména (prípona)',
+        'base_domain_help' => 'Príklad: pelican.dev (hráči sa pripoja cez meno.pelican.dev).',
+        'config_path' => 'Cesta ku konfiguračnému súboru',
+        'config_path_help' => 'Predvolené: config.yml pre Gate Proxy alebo velocity.toml pre Velocity.',
+        'only_minecraft' => 'Zobraziť iba na serveroch Minecraft',
+        'only_minecraft_help' => 'Skryje kartu Proxy doména na serveroch iných než Minecraft a na samotných proxy serveroch.',
+        'use_ip_alias' => 'Použiť IP alias pre backend adresu',
+        'use_ip_alias_help' => 'Ak je vypnuté, použije sa priama IP adresa alokácie (napr. 192.168.1.44:25566).',
+        'blacklist' => 'Zakázané subdomény',
+        'blacklist_help' => 'Rezervované subdomény, ktoré používatelia nemôžu získať.',
+        'sync_now' => 'Vynútiť synchronizáciu',
+    ],
+    'server' => [
+        'title' => 'Proxy doména',
+        'nav_label' => 'Proxy doména',
+        'section_title' => 'Vlastný názov domény (proxy)',
+        'section_desc' => 'Vyberte iba prefix svojej subdomény. Automaticky bude presmerovávať na váš server cez proxy.',
+        'subdomain_label' => 'Prefix subdomény',
+        'subdomain_help' => 'Iba písmená, číslice a pomlčky (napr. point-zero).',
+        'preview_label' => 'Úplná adresa pripojenia',
+        'preview_example' => 'napr.: point-zero.:domain',
+        'backend_label' => 'Presmerovanie na backend (IP:port)',
+        'no_allocation' => 'Na tomto serveri sa nenašla žiadna primárna alokácia.',
+    ],
+    'actions' => [
+        'save' => 'Uložiť',
+        'delete' => 'Odstrániť doménu',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Nastavenia uložené a konfigurácia proxy synchronizovaná!',
+        'synced' => 'Konfiguračný súbor proxy bol úspešne aktualizovaný!',
+        'sync_error' => 'Chyba pri synchronizácii s proxy serverom',
+        'route_saved' => 'Subdoména zaregistrovaná a aktívna na proxy!',
+        'route_deleted' => 'Subdoména odstránená z konfigurácie proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'V administračnom paneli (Smerovač proxy) nebol vybraný žiadny proxy server (Gate/Velocity).',
+        'proxy_not_found' => 'Nakonfigurovaný proxy server sa nenašiel.',
+        'blacklisted' => 'Tento názov subdomény je rezervovaný a nemožno ho použiť.',
+        'taken' => 'Táto subdoména sa už používa na inom serveri.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

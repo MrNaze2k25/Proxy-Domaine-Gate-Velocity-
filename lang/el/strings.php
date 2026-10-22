@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Δρομολογητής τομέων Proxy (Gate και Velocity)',
+        'nav_label' => 'Δρομολογητής Proxy',
+        'section_proxy' => 'Κύρια διαμόρφωση Proxy',
+        'section_proxy_desc' => 'Επιλέξτε το container στο οποίο τρέχει το Gate Proxy ή το Velocity. Εδώ εμφανίζονται μόνο διακομιστές Proxy.',
+        'proxy_server' => 'Διακομιστής Proxy (Gate / Velocity)',
+        'proxy_server_help' => 'Το container του οποίου το αρχείο ρυθμίσεων θα ενημερώνεται αυτόματα.',
+        'proxy_type' => 'Τύπος Proxy',
+        'base_domain' => 'Βασικός τομέας (επίθημα)',
+        'base_domain_help' => 'Παράδειγμα: pelican.dev (οι παίκτες θα συνδέονται μέσω όνομα.pelican.dev).',
+        'config_path' => 'Διαδρομή αρχείου ρυθμίσεων',
+        'config_path_help' => 'Προεπιλογή: config.yml για το Gate Proxy ή velocity.toml για το Velocity.',
+        'only_minecraft' => 'Εμφάνιση μόνο σε διακομιστές Minecraft',
+        'only_minecraft_help' => 'Κρύβει την καρτέλα Τομέας Proxy σε διακομιστές που δεν είναι Minecraft και στους ίδιους τους διακομιστές Proxy.',
+        'use_ip_alias' => 'Χρήση ψευδωνύμου IP για τη διεύθυνση backend',
+        'use_ip_alias_help' => 'Αν είναι απενεργοποιημένο, χρησιμοποιείται η άμεση διεύθυνση IP της κατανομής (π.χ. 192.168.1.44:25566).',
+        'blacklist' => 'Απαγορευμένοι υποτομείς',
+        'blacklist_help' => 'Δεσμευμένοι υποτομείς που οι χρήστες δεν μπορούν να επιλέξουν.',
+        'sync_now' => 'Αναγκαστικός συγχρονισμός',
+    ],
+    'server' => [
+        'title' => 'Τομέας Proxy',
+        'nav_label' => 'Τομέας Proxy',
+        'section_title' => 'Προσαρμοσμένο όνομα τομέα (Proxy)',
+        'section_desc' => 'Επιλέξτε μόνο το πρόθεμα του υποτομέα σας. Θα ανακατευθύνει αυτόματα στον διακομιστή σας μέσω του Proxy.',
+        'subdomain_label' => 'Πρόθεμα υποτομέα',
+        'subdomain_help' => 'Μόνο γράμματα, αριθμοί και παύλες (π.χ. point-zero).',
+        'preview_label' => 'Πλήρης διεύθυνση σύνδεσης',
+        'preview_example' => 'π.χ.: point-zero.:domain',
+        'backend_label' => 'Ανακατεύθυνση backend (IP:θύρα)',
+        'no_allocation' => 'Δεν βρέθηκε κύρια κατανομή σε αυτόν τον διακομιστή.',
+    ],
+    'actions' => [
+        'save' => 'Αποθήκευση',
+        'delete' => 'Διαγραφή τομέα',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Οι ρυθμίσεις αποθηκεύτηκαν και η διαμόρφωση του proxy συγχρονίστηκε!',
+        'synced' => 'Το αρχείο ρυθμίσεων του proxy ενημερώθηκε επιτυχώς!',
+        'sync_error' => 'Σφάλμα κατά τον συγχρονισμό με τον διακομιστή Proxy',
+        'route_saved' => 'Ο υποτομέας καταχωρίστηκε και είναι ενεργός στο Proxy!',
+        'route_deleted' => 'Ο υποτομέας αφαιρέθηκε από τη διαμόρφωση του Proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Δεν έχει επιλεγεί διακομιστής Proxy (Gate/Velocity) στον πίνακα διαχείρισης (Δρομολογητής Proxy).',
+        'proxy_not_found' => 'Ο ρυθμισμένος διακομιστής Proxy δεν βρέθηκε.',
+        'blacklisted' => 'Αυτό το όνομα υποτομέα είναι δεσμευμένο και δεν μπορεί να χρησιμοποιηθεί.',
+        'taken' => 'Αυτός ο υποτομέας χρησιμοποιείται ήδη από άλλον διακομιστή.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

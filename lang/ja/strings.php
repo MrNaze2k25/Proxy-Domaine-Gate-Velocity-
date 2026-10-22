@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'プロキシドメインルーター（Gate & Velocity）',
+        'nav_label' => 'プロキシルーター',
+        'section_proxy' => 'プロキシのメイン設定',
+        'section_proxy_desc' => 'Gate Proxy または Velocity を実行しているコンテナを選択してください。ここにはプロキシサーバーのみが表示されます。',
+        'proxy_server' => 'プロキシサーバー（Gate / Velocity）',
+        'proxy_server_help' => '設定ファイルが自動的に更新されるコンテナです。',
+        'proxy_type' => 'プロキシの種類',
+        'base_domain' => 'ベースドメイン（サフィックス）',
+        'base_domain_help' => '例：pelican.dev（プレイヤーは名前.pelican.dev で接続します）。',
+        'config_path' => '設定ファイルのパス',
+        'config_path_help' => 'デフォルト：Gate Proxy は config.yml、Velocity は velocity.toml。',
+        'only_minecraft' => 'Minecraft サーバーでのみ表示',
+        'only_minecraft_help' => 'Minecraft 以外のサーバーおよびプロキシサーバー自体では「プロキシドメイン」タブを非表示にします。',
+        'use_ip_alias' => 'バックエンドアドレスに IP エイリアスを使用',
+        'use_ip_alias_help' => '無効の場合、割り当ての直接 IP アドレスを使用します（例：192.168.1.44:25566）。',
+        'blacklist' => '禁止サブドメイン',
+        'blacklist_help' => 'ユーザーが取得できない予約済みサブドメインです。',
+        'sync_now' => '今すぐ強制同期',
+    ],
+    'server' => [
+        'title' => 'プロキシドメイン',
+        'nav_label' => 'プロキシドメイン',
+        'section_title' => 'カスタムドメイン名（プロキシ）',
+        'section_desc' => 'サブドメインのプレフィックスのみを選んでください。プロキシ経由で自動的にサーバーへ転送されます。',
+        'subdomain_label' => 'サブドメインのプレフィックス',
+        'subdomain_help' => '英数字とハイフンのみ使用できます（例：point-zero）。',
+        'preview_label' => '完全な接続アドレス',
+        'preview_example' => '例：point-zero.:domain',
+        'backend_label' => 'バックエンド転送先（IP:ポート）',
+        'no_allocation' => 'このサーバーにプライマリ割り当てが見つかりません。',
+    ],
+    'actions' => [
+        'save' => '保存',
+        'delete' => 'ドメインを削除',
+    ],
+    'notifications' => [
+        'settings_saved' => '設定を保存し、プロキシ設定を同期しました！',
+        'synced' => 'プロキシの設定ファイルを更新しました！',
+        'sync_error' => 'プロキシサーバーとの同期中にエラーが発生しました',
+        'route_saved' => 'サブドメインを登録し、プロキシで有効になりました！',
+        'route_deleted' => 'プロキシ設定からサブドメインを削除しました。',
+    ],
+    'errors' => [
+        'no_proxy_selected' => '管理パネル（プロキシルーター）でプロキシサーバー（Gate/Velocity）が選択されていません。',
+        'proxy_not_found' => '設定されたプロキシサーバーが見つかりません。',
+        'blacklisted' => 'このサブドメイン名は予約されており、使用できません。',
+        'taken' => 'このサブドメインは別のサーバーで既に使用されています。',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

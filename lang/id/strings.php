@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Router Domain Proxy (Gate & Velocity)',
+        'nav_label' => 'Router Proxy',
+        'section_proxy' => 'Konfigurasi Proxy Utama',
+        'section_proxy_desc' => 'Pilih container yang menjalankan Gate Proxy atau Velocity. Hanya server Proxy yang ditampilkan di sini.',
+        'proxy_server' => 'Server Proxy (Gate / Velocity)',
+        'proxy_server_help' => 'Container yang file konfigurasinya akan diperbarui secara otomatis.',
+        'proxy_type' => 'Tipe Proxy',
+        'base_domain' => 'Domain Dasar (Sufiks)',
+        'base_domain_help' => 'Contoh: pelican.dev (pemain akan terhubung melalui nama.pelican.dev).',
+        'config_path' => 'Path File Konfigurasi',
+        'config_path_help' => 'Default: config.yml untuk Gate Proxy, atau velocity.toml untuk Velocity.',
+        'only_minecraft' => 'Tampilkan hanya di server Minecraft',
+        'only_minecraft_help' => 'Menyembunyikan tab Domain Proxy di server non-Minecraft dan di server Proxy itu sendiri.',
+        'use_ip_alias' => 'Gunakan alias IP untuk alamat backend',
+        'use_ip_alias_help' => 'Jika dinonaktifkan, menggunakan alamat IP langsung dari alokasi (mis. 192.168.1.44:25566).',
+        'blacklist' => 'Subdomain Terlarang',
+        'blacklist_help' => 'Subdomain yang dicadangkan dan tidak dapat dipilih pengguna.',
+        'sync_now' => 'Paksa Sinkronisasi',
+    ],
+    'server' => [
+        'title' => 'Domain Proxy',
+        'nav_label' => 'Domain Proxy',
+        'section_title' => 'Nama Domain Kustom (Proxy)',
+        'section_desc' => 'Pilih hanya awalan subdomain Anda. Subdomain akan otomatis diarahkan ke server Anda melalui Proxy.',
+        'subdomain_label' => 'Awalan Subdomain',
+        'subdomain_help' => 'Hanya huruf, angka, dan tanda hubung (mis. point-zero).',
+        'preview_label' => 'Alamat Koneksi Lengkap',
+        'preview_example' => 'mis.: point-zero.:domain',
+        'backend_label' => 'Pengalihan Backend (IP:Port)',
+        'no_allocation' => 'Alokasi utama tidak ditemukan di server ini.',
+    ],
+    'actions' => [
+        'save' => 'Simpan',
+        'delete' => 'Hapus Domain',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Pengaturan disimpan dan konfigurasi proxy disinkronkan!',
+        'synced' => 'File konfigurasi proxy berhasil diperbarui!',
+        'sync_error' => 'Terjadi kesalahan saat sinkronisasi dengan server Proxy',
+        'route_saved' => 'Subdomain terdaftar dan aktif di Proxy!',
+        'route_deleted' => 'Subdomain dihapus dari konfigurasi Proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Belum ada server Proxy (Gate/Velocity) yang dipilih di Panel Admin (Router Proxy).',
+        'proxy_not_found' => 'Server Proxy yang dikonfigurasi tidak ditemukan.',
+        'blacklisted' => 'Nama subdomain ini dicadangkan dan tidak dapat digunakan.',
+        'taken' => 'Subdomain ini sudah digunakan oleh server lain.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => 'Router de domenii Proxy (Gate și Velocity)',
+        'nav_label' => 'Router Proxy',
+        'section_proxy' => 'Configurația principală a Proxy-ului',
+        'section_proxy_desc' => 'Selectați containerul pe care rulează Gate Proxy sau Velocity. Aici sunt listate doar serverele Proxy.',
+        'proxy_server' => 'Server Proxy (Gate / Velocity)',
+        'proxy_server_help' => 'Containerul al cărui fișier de configurare va fi actualizat automat.',
+        'proxy_type' => 'Tip de Proxy',
+        'base_domain' => 'Domeniu de bază (sufix)',
+        'base_domain_help' => 'Exemplu: pelican.dev (jucătorii se vor conecta prin nume.pelican.dev).',
+        'config_path' => 'Calea fișierului de configurare',
+        'config_path_help' => 'Implicit: config.yml pentru Gate Proxy sau velocity.toml pentru Velocity.',
+        'only_minecraft' => 'Afișează doar pe serverele Minecraft',
+        'only_minecraft_help' => 'Ascunde fila Domeniu Proxy pe serverele non-Minecraft și pe serverele Proxy înseși.',
+        'use_ip_alias' => 'Folosește aliasul IP pentru adresa backend',
+        'use_ip_alias_help' => 'Dacă este dezactivat, folosește adresa IP directă a alocării (ex.: 192.168.1.44:25566).',
+        'blacklist' => 'Subdomenii interzise',
+        'blacklist_help' => 'Subdomenii rezervate pe care utilizatorii nu le pot alege.',
+        'sync_now' => 'Forțează sincronizarea',
+    ],
+    'server' => [
+        'title' => 'Domeniu Proxy',
+        'nav_label' => 'Domeniu Proxy',
+        'section_title' => 'Nume de domeniu personalizat (Proxy)',
+        'section_desc' => 'Alegeți doar prefixul subdomeniului. Va redirecționa automat către serverul dvs. prin Proxy.',
+        'subdomain_label' => 'Prefix subdomeniu',
+        'subdomain_help' => 'Doar litere, cifre și cratime (ex.: point-zero).',
+        'preview_label' => 'Adresa completă de conectare',
+        'preview_example' => 'ex.: point-zero.:domain',
+        'backend_label' => 'Redirecționare backend (IP:Port)',
+        'no_allocation' => 'Nu a fost găsită nicio alocare principală pe acest server.',
+    ],
+    'actions' => [
+        'save' => 'Salvează',
+        'delete' => 'Șterge domeniul',
+    ],
+    'notifications' => [
+        'settings_saved' => 'Setări salvate și configurația proxy sincronizată!',
+        'synced' => 'Fișierul de configurare al proxy-ului a fost actualizat cu succes!',
+        'sync_error' => 'Eroare la sincronizarea cu serverul Proxy',
+        'route_saved' => 'Subdomeniu înregistrat și activ pe Proxy!',
+        'route_deleted' => 'Subdomeniu eliminat din configurația Proxy.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => 'Niciun server Proxy (Gate/Velocity) nu a fost selectat în panoul de administrare (Router Proxy).',
+        'proxy_not_found' => 'Serverul Proxy configurat nu a fost găsit.',
+        'blacklisted' => 'Acest nume de subdomeniu este rezervat și nu poate fi folosit.',
+        'taken' => 'Acest subdomeniu este deja folosit de alt server.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];

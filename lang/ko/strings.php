@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'admin' => [
+        'title' => '프록시 도메인 라우터 (Gate & Velocity)',
+        'nav_label' => '프록시 라우터',
+        'section_proxy' => '프록시 기본 설정',
+        'section_proxy_desc' => 'Gate Proxy 또는 Velocity를 실행 중인 컨테이너를 선택하세요. 여기에는 프록시 서버만 표시됩니다.',
+        'proxy_server' => '프록시 서버 (Gate / Velocity)',
+        'proxy_server_help' => '설정 파일이 자동으로 업데이트될 컨테이너입니다.',
+        'proxy_type' => '프록시 유형',
+        'base_domain' => '기본 도메인 (접미사)',
+        'base_domain_help' => '예: pelican.dev (플레이어는 이름.pelican.dev로 접속합니다).',
+        'config_path' => '설정 파일 경로',
+        'config_path_help' => '기본값: Gate Proxy는 config.yml, Velocity는 velocity.toml.',
+        'only_minecraft' => 'Minecraft 서버에서만 표시',
+        'only_minecraft_help' => 'Minecraft가 아닌 서버와 프록시 서버 자체에서는 프록시 도메인 탭을 숨깁니다.',
+        'use_ip_alias' => '백엔드 주소에 IP 별칭 사용',
+        'use_ip_alias_help' => '비활성화하면 할당의 직접 IP 주소를 사용합니다 (예: 192.168.1.44:25566).',
+        'blacklist' => '금지된 서브도메인',
+        'blacklist_help' => '사용자가 선택할 수 없는 예약된 서브도메인입니다.',
+        'sync_now' => '지금 강제 동기화',
+    ],
+    'server' => [
+        'title' => '프록시 도메인',
+        'nav_label' => '프록시 도메인',
+        'section_title' => '사용자 지정 도메인 이름 (프록시)',
+        'section_desc' => '서브도메인 접두사만 선택하세요. 프록시를 통해 자동으로 서버로 연결됩니다.',
+        'subdomain_label' => '서브도메인 접두사',
+        'subdomain_help' => '영문자, 숫자, 하이픈만 사용 가능합니다 (예: point-zero).',
+        'preview_label' => '전체 접속 주소',
+        'preview_example' => '예: point-zero.:domain',
+        'backend_label' => '백엔드 리디렉션 (IP:포트)',
+        'no_allocation' => '이 서버에서 기본 할당을 찾을 수 없습니다.',
+    ],
+    'actions' => [
+        'save' => '저장',
+        'delete' => '도메인 삭제',
+    ],
+    'notifications' => [
+        'settings_saved' => '설정이 저장되고 프록시 설정이 동기화되었습니다!',
+        'synced' => '프록시 설정 파일이 성공적으로 업데이트되었습니다!',
+        'sync_error' => '프록시 서버와 동기화하는 중 오류가 발생했습니다',
+        'route_saved' => '서브도메인이 등록되어 프록시에서 활성화되었습니다!',
+        'route_deleted' => '프록시 설정에서 서브도메인이 제거되었습니다.',
+    ],
+    'errors' => [
+        'no_proxy_selected' => '관리자 패널(프록시 라우터)에서 프록시 서버(Gate/Velocity)가 선택되지 않았습니다.',
+        'proxy_not_found' => '설정된 프록시 서버를 찾을 수 없습니다.',
+        'blacklisted' => '이 서브도메인 이름은 예약되어 있어 사용할 수 없습니다.',
+        'taken' => '이 서브도메인은 이미 다른 서버에서 사용 중입니다.',
+    ],
+    'proxy_types' => [
+        'gate' => 'Gate Proxy (Lite - config.yml)',
+        'velocity' => 'Velocity (velocity.toml + /velocity reload)',
+    ],
+];
