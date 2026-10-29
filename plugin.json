@@ -5,7 +5,7 @@
     "version": "1.0.1",
     "description": "Automatically manages Minecraft subdomains and routing routes on Gate Proxy (Lite mode) or Velocity.",
     "category": "plugin",
-    "namespace": "Julie\\ProxyDomains",
+    "namespace": "Naze\\ProxyDomains",
     "class": "ProxyDomainsPlugin",
     "panels": [
         "admin",
